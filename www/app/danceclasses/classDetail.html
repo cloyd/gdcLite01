@@ -1,0 +1,29 @@
+
+<ion-view title="Class Detail">
+    <ion-content class="padding">
+    <div class="list card">
+
+      <div class="item item-body">
+          <div class="video-container">
+               <iframe src="http://www.youtube.com/embed/SK-4H9sgv88?rel=0"
+                    frameborder="0" allowfullscreen>
+                </iframe>
+          </div>
+
+
+        <img ng-show="" class="full-image" src="img/class/{{vm.danceclass.teacher.classimg}}.jpg">
+        <h2>{{vm.danceclass.dancestyle.name}} by {{vm.danceclass.teacher.firstname}} {{vm.danceclass.teacher.lastname}}</h2>
+        <p><strong>Time:</strong> {{vm.danceclass.time}}</p>
+        <p><strong>Date:</strong> {{vm.danceclass.date | date:'longDate'}}</p>
+        <p>
+            <strong>Location:</strong>
+            <!-- <a href="#/tab/locationMap/{{vm.danceclass.location.id}}" class="subdued">  -->
+            <a href="#/tab/locations" class="subdued">
+                {{vm.danceclass.location.name}}
+            </a>
+        </p>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

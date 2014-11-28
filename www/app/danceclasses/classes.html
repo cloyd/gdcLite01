@@ -1,0 +1,19 @@
+<ion-view title="Classes">
+  <ion-content>
+  <ion-refresher pulling-text="Pull to refresh..." on-refresh="vm.loadList(true)"></ion-refresher>
+    <ion-list>
+        <div ng-repeat="day in vm.danceClasses | groupBy: 'date': 'weekday' ">
+            <div class="item item-divider">
+                {{day.date | date:'EEEE'}}
+            </div>
+            <ion-item  ng-repeat="class in day.items "  href="#/tab/classDetail/{{class.id}}" class="item-thumbnail-left item-icon-right">
+                <img src="img/{{class.teacher.img}}.jpg" ng-hide="{{class.teacher.img}}">
+                <h3>{{class.dancestyle.name}} by {{class.teacher.firstname}}</h3>
+                <p>{{class.date | date:'mediumDate'}}</p>
+                <p>{{class.time}}</p>
+                <i class="icon ion-ios7-arrow-right icon-accessory"></i>
+            </ion-item>
+        </div>
+    </ion-list>
+  </ion-content>
+</ion-view>
