@@ -6,6 +6,7 @@ G-Force Dance Center app lite
 
 
 ##Usage
+
 install cordova and ionic
 
 npm install -g cordova ionic
